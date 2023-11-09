@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-blue-color: hsl(215, 51%, 70%);
+    --cyan-color: hsl(178, 100%, 50%);
+    --mainBG-color: hsl(217, 54%, 11%);
+    --cardBG-color: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --white-color: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mainBG-color);
+    font-family: 'Outfit', sans-serif;
+}
+
+main {
+    background-color: var(--cardBG-color);
+    width: 380px;
+    height: fit-content;
+    padding: 25px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.img-container {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+}
+
+.main-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+
+.overlay-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 99%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    border-radius: 10px;
+    display: none;
+}
+
+.overlay-bg img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+}
+
+.img-container:hover .overlay-bg {
+    display: block;
+    cursor: pointer;
+}
+
+h1 {
+    color: var(--white-color);
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+h1:hover {
+    color: var(--cyan-color);
+    cursor: pointer;
+}
+
+p {
+    font-size: 18px;
+    color: var(--soft-blue-color);
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.infos {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line-color);
+}
+
+#cryptoAmmount {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    color: var(--cyan-color);
+}
+
+#timeLeft {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    color: var(--soft-blue-color);
+}
+
+.info-img {
+    margin-right: 5px;
+}
+
+.user-img {
+    height: 35px;
+    width: 35px;
+}
+
+h2 {
+    margin-top: 16px;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    color: var(--soft-blue-color);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+h2 img {
+    border: 1px solid var(--white-color);
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.user-name {
+    text-decoration: none;
+    color: var(--white-color);
+    margin-left: 4px;
+}
+
+.user-name:hover {
+    color: var(--cyan-color);
+}
+
+@media (max-width: 450px) {
+   body {
+    display: flex;
+    height: 100vh
+   }
+
+   main {
+    max-width: 350px;
+   }
+}
